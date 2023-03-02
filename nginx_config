@@ -1,0 +1,15 @@
+    upstream app {
+
+     server localhost:8080;
+    }
+    server {
+        listen       8080;
+        #server_name  localhost;
+        location / {
+            proxy_pass http://app;
+        }
+        location /signin/ {
+            root   html/site;
+            index  auth.html;
+        }
+    }
