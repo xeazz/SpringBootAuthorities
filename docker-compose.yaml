@@ -1,0 +1,8 @@
+version: '1'
+
+services:
+  app:
+    image: "app:1.0"
+    container_name: "Authorization"
+    ports:
+      - '8080'
